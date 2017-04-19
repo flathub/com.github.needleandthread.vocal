@@ -34,6 +34,24 @@
 	],
 	"modules":[
 		{
+			"name": "ffmpeg",
+			"cleanup": [ "/include", "/lib/pkgconfig", "/share/ffmpeg/examples" ],
+			"config-opts": [
+				"--enable-shared",
+				"--disable-everything",
+				"--disable-static",
+				"--enable-gnutls",
+				"--enable-hwaccels",
+				"--enable-decoder=h264",
+				"--enable-decoder=aac"
+				],
+			"sources": [{
+				"type": "archive",
+				"url": "https://ffmpeg.org/releases/ffmpeg-3.3.tar.xz",
+				"sha256": "599e7f7c017221c22011c4037b88bdcd1c47cd40c1e466838bc3c465f3e9569d"
+			}]
+		},
+		{
 			"name": "gst-libav",
 			"config-opts": [ "--disable-gtk-doc", "--with-system-libav" ],
 			"cleanup": [ "*.la", "/share/gtk-doc" ],
@@ -41,8 +59,7 @@
 			"type": "archive",
 			"url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.10.4.tar.xz",
 			"sha256": "6ca0feca75e3d48315e07f20ec37cf6260ed1e9dde58df355febd5016246268b"
-			}],
-			"modules": [ "org.ffmpeg.FFmpeg.json" ]
+			}]
 		},
 		{
 			"name": "libgee",
@@ -55,9 +72,9 @@
 			},
 			"sources":[
 				{
-					"type":"git",
-					"url": "https://github.com/GNOME/libgee.git",
-					"branch": "0.20.0"
+					"type":"archive",
+					"url": "https://github.com/GNOME/libgee/archive/0.20.0.tar.gz",
+					"sha256": "42fe6d651910cb8b720167f71c5255a1b7b1afc82fecd3f31e61f9602b3b1335"
 				}
 			]
 		},
