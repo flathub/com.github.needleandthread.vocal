@@ -1,20 +1,6 @@
 {
   "name": "ffmpeg",
   "cleanup": [ "/include", "/lib/pkgconfig", "/share/ffmpeg/examples" ],
-  "build-options" : {
-    "arch" : {
-      "i386" : {
-        "config-opts" : [
-          "--arch=x86"
-        ]
-      },
-      "arm" : {
-        "config-opts" : [
-          "--arch=arm"
-        ]
-      }
-    }
-  },
   "config-opts": [
     "--enable-shared",
     "--disable-everything",
