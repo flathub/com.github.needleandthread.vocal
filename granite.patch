@@ -1,0 +1,15 @@
+--- ./lib/Widgets/ContractorView.vala
++++ ./lib/Widgets/ContractorView (Kopie).vala
+@@ -181,7 +181,11 @@
+ 	        string text = value.get_string ();
+ 
+ 	        if (text[3:text.index_of ("</b>")] in names) {
++#if VALA_0_36
++		    list.remove (ref it);
++#else
+ 	            list.remove (it);
++#endif
+ 	            blacklisted_pos += cur_pos;
+             }
+ 	        if (!check)
+
