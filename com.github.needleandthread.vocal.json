@@ -1,5 +1,5 @@
 {
-	"app-id": "com.github.needle_and_thread.vocal",
+	"app-id": "com.github.needleandthread.vocal",
 	"runtime": "org.gnome.Platform",
 	"runtime-version": "3.24",
 	"sdk": "org.gnome.Sdk",
@@ -28,8 +28,8 @@
 	"--talk-name=org.gnome.SettingsDaemon",
 	"--talk-name=org.mate.SettingsDaemon",
 
-	"--own-name=org.mpris.MediaPlayer2.Vocal",
-	"--own-name=com.github.needle-and-thread.vocal",
+	"--own-name=org.mpris.MediaPlayer2.com.github.needleandthread.vocal",
+	"--own-name=com.github.needleandthread.vocal",
 	"--filesystem=/tmp"
 	],
 	"modules":[
@@ -42,8 +42,7 @@
 				"--disable-static",
 				"--enable-gnutls",
 				"--enable-hwaccels",
-				"--enable-decoder=h264",
-				"--enable-decoder=aac"
+				"--enable-decoder=h264"
 				],
 			"sources": [{
 				"type": "archive",
@@ -53,7 +52,7 @@
 		},
 		{
 			"name": "gst-libav",
-			"config-opts": [ "--disable-gtk-doc", "--with-system-libav" ],
+			"config-opts": [ "--disable-doc", "--disable-gtk-doc", "--with-system-libav" ],
 			"cleanup": [ "*.la", "/share/gtk-doc" ],
 			"sources": [{
 			"type": "archive",
@@ -106,13 +105,7 @@
 			"sources":[
 				{
 					"type":"git",
-					"url": "https://github.com/needle-and-thread/vocal.git",
-					"branch": "2.0.12-beta",
-					"commit": "936b3ef5256f12b0439e1c3bb61c120fee68c315"
-				},
-				{
-					"type": "patch",
-					"path": "vocal.patch"
+					"url": "https://github.com/needle-and-thread/vocal.git"
 				}
 			]
 		}
