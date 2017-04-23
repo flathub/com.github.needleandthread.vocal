@@ -1,5 +1,5 @@
 --- ./lib/Widgets/ContractorView.vala
-+++ ./lib/Widgets/ContractorView (Kopie).vala
++++ ./lib/Widgets/ContractorView.vala
 @@ -181,7 +181,11 @@
  	        string text = value.get_string ();
  
