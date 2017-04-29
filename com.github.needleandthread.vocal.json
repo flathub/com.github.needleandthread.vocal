@@ -105,6 +105,8 @@
 			"sources":[
 				{
 					"type":"git",
+					"branch": "2.0.14",
+					"commit": "2ad6746063b016cf319803d850934a0bfb6a99bd",
 					"url": "https://github.com/needle-and-thread/vocal.git"
 				}
 			]
