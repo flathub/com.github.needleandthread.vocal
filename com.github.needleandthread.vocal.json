@@ -28,8 +28,8 @@
 	"--talk-name=org.gnome.SettingsDaemon",
 	"--talk-name=org.mate.SettingsDaemon",
 
-	"--own-name=org.mpris.MediaPlayer2.com.github.needleandthread.vocal",
-	"--own-name=com.github.needleandthread.vocal",
+	"--own-name=com.github.needle-and-thread.vocal",
+
 	"--filesystem=/tmp"
 	],
 	"modules":[
