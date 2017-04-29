@@ -7,32 +7,32 @@
 	"rename-icon": "com.github.needle-and-thread.vocal",
 	"rename-desktop-file": "com.github.needle-and-thread.vocal.desktop",
 	"rename-appdata-file": "com.github.needle-and-thread.vocal.appdata.xml",
-	"finish-args":[
-	"--socket=wayland",
-	"--socket=x11",
-	"--socket=pulseaudio",
-	"--share=network",
-	"--device=dri",
+	"finish-args": [
+		"--socket=wayland",
+		"--socket=x11",
+		"--socket=pulseaudio",
+		"--share=network",
+		"--device=dri",
 
-	"--talk-name=org.gtk.vfs",
-	"--talk-name=org.gtk.vfs.*",
+		"--talk-name=org.gtk.vfs",
+		"--talk-name=org.gtk.vfs.*",
 
-	"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-	"--filesystem=xdg-run/dconf",
-	"--filesystem=~/.config/dconf:ro",
-	"--talk-name=ca.desrt.dconf",
-	"--talk-name=org.freedesktop.secrets",
+		"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+		"--filesystem=xdg-run/dconf",
+		"--filesystem=~/.config/dconf:ro",
+		"--talk-name=ca.desrt.dconf",
+		"--talk-name=org.freedesktop.secrets",
 
-	"--talk-name=org.freedesktop.Notifications",
+		"--talk-name=org.freedesktop.Notifications",
 
-	"--talk-name=org.gnome.SettingsDaemon",
-	"--talk-name=org.mate.SettingsDaemon",
+		"--talk-name=org.gnome.SettingsDaemon",
+		"--talk-name=org.mate.SettingsDaemon",
 
-	"--own-name=com.github.needle-and-thread.vocal",
+		"--own-name=com.github.needle-and-thread.vocal",
 
-	"--filesystem=/tmp"
+		"--filesystem=/tmp"
 	],
-	"modules":[
+	"modules": [
 		{
 			"name": "ffmpeg",
 			"cleanup": [ "/include", "/lib/pkgconfig", "/share/ffmpeg/examples" ],
@@ -43,33 +43,37 @@
 				"--enable-gnutls",
 				"--enable-hwaccels",
 				"--enable-decoder=h264"
-				],
-			"sources": [{
-				"type": "archive",
-				"url": "https://ffmpeg.org/releases/ffmpeg-3.3.tar.xz",
-				"sha256": "599e7f7c017221c22011c4037b88bdcd1c47cd40c1e466838bc3c465f3e9569d"
-			}]
+			],
+			"sources": [
+				{
+					"type": "archive",
+					"url": "https://ffmpeg.org/releases/ffmpeg-3.3.tar.xz",
+					"sha256": "599e7f7c017221c22011c4037b88bdcd1c47cd40c1e466838bc3c465f3e9569d"
+				}
+			]
 		},
 		{
 			"name": "gst-libav",
 			"config-opts": [ "--disable-doc", "--disable-gtk-doc", "--with-system-libav" ],
 			"cleanup": [ "*.la", "/share/gtk-doc" ],
-			"sources": [{
-			"type": "archive",
-			"url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.10.4.tar.xz",
-			"sha256": "6ca0feca75e3d48315e07f20ec37cf6260ed1e9dde58df355febd5016246268b"
-			}]
+			"sources": [
+				{
+					"type": "archive",
+					"url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.10.4.tar.xz",
+					"sha256": "6ca0feca75e3d48315e07f20ec37cf6260ed1e9dde58df355febd5016246268b"
+				}
+			]
 		},
 		{
 			"name": "libgee",
 			"buildsystem": "autotools",
-			"build-options" : {
+			"build-options": {
 				"env": {
 					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
 					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
 				}
 			},
-			"sources":[
+			"sources": [
 				{
 					"type":"archive",
 					"url": "https://github.com/GNOME/libgee/archive/0.20.0.tar.gz",
@@ -81,13 +85,13 @@
 			"name": "granite",
 			"buildsystem": "cmake",
 			"config-opts": ["-DCMAKE_BUILD_TYPE=Release", "-DCMAKE_INSTALL_PREFIX=/app", "-DCMAKE_INSTALL_LIBDIR=/app/lib"],
-			"build-options" : {
+			"build-options": {
 				"env": {
 					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
 					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
 				}
 			},
-			"sources":[
+			"sources": [
 				{
 					"type":"archive",
 					"url": "https://launchpad.net/granite/0.4/0.4.0.1/+download/granite-0.4.0.1.tar.xz",
@@ -102,9 +106,9 @@
 		{
 			"name": "vocal",
 			"buildsystem": "cmake",
-			"sources":[
+			"sources": [
 				{
-					"type":"git",
+					"type": "git",
 					"branch": "2.0.14",
 					"commit": "2ad6746063b016cf319803d850934a0bfb6a99bd",
 					"url": "https://github.com/needle-and-thread/vocal.git"
