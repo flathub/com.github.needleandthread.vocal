@@ -20,8 +20,11 @@
 		"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
 		"--filesystem=xdg-run/dconf",
 		"--filesystem=~/.config/dconf:ro",
+		
 		"--talk-name=ca.desrt.dconf",
 		"--talk-name=org.freedesktop.secrets",
+
+		"--filesystem=xdg-data/vocal:create",
 
 		"--talk-name=org.freedesktop.Notifications",
 
@@ -116,6 +119,10 @@
 					"branch": "2.0.14",
 					"commit": "2ad6746063b016cf319803d850934a0bfb6a99bd",
 					"url": "https://github.com/needle-and-thread/vocal.git"
+				},
+				{
+					"type": "patch",
+					"path": "icon.patch"
 				}
 			]
 		}
