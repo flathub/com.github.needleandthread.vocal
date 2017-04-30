@@ -35,13 +35,17 @@
 	"modules": [
 		{
 			"name": "ffmpeg",
-			"cleanup": [ "/include", "/lib/pkgconfig", "/share/ffmpeg/examples" ],
+			"cleanup": [ "/include", "/lib/pkgconfig", "/share" ],
 			"config-opts": [
+				"--disable-all",
 				"--enable-shared",
-				"--disable-everything",
 				"--disable-static",
 				"--enable-gnutls",
-				"--enable-hwaccels",
+				"--enable-avfilter",
+				"--enable-avcodec",
+				"--enable-avformat",
+				"--enable-swscale",
+				"--enable-decoder=mp3",
 				"--enable-decoder=h264"
 			],
 			"sources": [
