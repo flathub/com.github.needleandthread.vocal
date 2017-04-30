@@ -122,7 +122,11 @@
 				},
 				{
 					"type": "patch",
-					"path": "icon.patch"
+					"path": "icon-install-path.patch"
+				},
+				{
+					"type": "patch",
+					"path": "about-icon.patch"
 				}
 			]
 		}
