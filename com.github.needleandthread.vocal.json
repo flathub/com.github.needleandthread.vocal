@@ -35,6 +35,23 @@
 
 		"--filesystem=/tmp"
 	],
+	"build-options": {
+		"cflags": "-O2",
+		"cxxflags": "-O2 -std=c++11",
+		"env": {
+		    "V": "1"
+		}
+	},
+	"cleanup": [
+		"/include",
+		"/lib/pkgconfig",
+		"/man",
+		"*.a",
+		"*.la",
+		"/bin/granite-demo",
+		"/lib/debug",
+		"/share/vala"
+	],
 	"modules": [
 		{
 			"name": "ffmpeg",
