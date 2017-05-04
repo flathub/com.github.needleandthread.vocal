@@ -34,6 +34,8 @@
 		"--own-name=com.github.needle-and-thread.vocal",
 
 		"--filesystem=/tmp"
+		
+		"--filesystem=home",
 	],
 	"build-options": {
 		"cflags": "-O2",
