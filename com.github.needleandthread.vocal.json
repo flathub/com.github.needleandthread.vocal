@@ -11,48 +11,42 @@
 		"--socket=wayland",
 		"--socket=x11",
 		"--socket=pulseaudio",
+		
 		"--share=network",
+		
 		"--device=dri",
+
+		"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+		
+		"--own-name=com.github.needle-and-thread.vocal",
 
 		"--talk-name=org.gtk.vfs",
 		"--talk-name=org.gtk.vfs.*",
-
-		"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-		"--filesystem=xdg-run/dconf",
-		"--filesystem=~/.config/dconf:ro",
-		
 		"--talk-name=ca.desrt.dconf",
 		"--talk-name=org.freedesktop.secrets",
-
-		"--filesystem=xdg-data/vocal:create",
-
 		"--talk-name=org.freedesktop.Notifications",
-
 		"--talk-name=org.gnome.SettingsDaemon",
 		"--talk-name=org.mate.SettingsDaemon",
 
-		"--own-name=com.github.needle-and-thread.vocal",
-
 		"--filesystem=/tmp",
-		
-		"--filesystem=home"
+		"--filesystem=home",
+		"--filesystem=xdg-config/dconf:ro",
+		"--filesystem=xdg-run/dconf",
+		"--filesystem=xdg-data/vocal:create"
 	],
 	"build-options": {
 		"cflags": "-O2",
-		"cxxflags": "-O2 -std=c++11",
-		"env": {
-		    "V": "1"
-		}
+		"cxxflags": "-O2"
 	},
 	"cleanup": [
+		"/bin/granite-demo",
 		"/include",
 		"/lib/pkgconfig",
+		"/lib/debug",
+		"/share/vala",
 		"/man",
 		"*.a",
-		"*.la",
-		"/bin/granite-demo",
-		"/lib/debug",
-		"/share/vala"
+		"*.la"
 	],
 	"modules": [
 		{
@@ -80,7 +74,7 @@
 		},
 		{
 			"name": "gst-libav",
-			"config-opts": [ "--disable-doc", "--disable-gtk-doc", "--with-system-libav" ],
+			"config-opts": [ "--disable-gtk-doc", "--with-system-libav" ],
 			"cleanup": [ "*.la", "/share/gtk-doc" ],
 			"sources": [
 				{
