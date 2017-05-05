@@ -74,7 +74,7 @@
 		},
 		{
 			"name": "gst-libav",
-			"config-opts": [ "--disable-gtk-doc", "--with-system-libav" ],
+			"config-opts": [ "--disable-doc", "--disable-gtk-doc", "--with-system-libav" ],
 			"cleanup": [ "*.la", "/share/gtk-doc" ],
 			"sources": [
 				{
