@@ -128,14 +128,9 @@
 			"buildsystem": "cmake",
 			"sources": [
 				{
-					"type": "git",
-					"branch": "2.0.14",
-					"commit": "2ad6746063b016cf319803d850934a0bfb6a99bd",
-					"url": "https://github.com/needle-and-thread/vocal.git"
-				},
-				{
-					"type": "patch",
-					"path": "icon-install-path.patch"
+					"type": "archive",
+					"url": "https://github.com/needle-and-thread/vocal/archive/2.0.16.tar.gz",
+					"sha256": "2ee7a1d02ee597a4b108d98ec85d3bf89ad57f7399c241d32159f6fa2e4e6674"
 				},
 				{
 					"type": "patch",
