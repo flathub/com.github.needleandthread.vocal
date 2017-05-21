@@ -129,12 +129,16 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/needle-and-thread/vocal/archive/2.0.17.tar.gz",
-					"sha256": "ec652db10fe6e0219be2bbac87d9f9c7cce29ee6d761e8f18561cc27c83d51c6"
+					"url": "https://github.com/needle-and-thread/vocal/archive/2.0.18.tar.gz",
+					"sha256": "0be59c8b09f1f1befadae9aa1b42e8dd5093ef09b6780b77d396a3abfd58d1dc"
 				},
 				{
 					"type": "patch",
 					"path": "about-icon.patch"
+				},
+				{
+					"type": "patch",
+					"path": "appdata.patch"
 				}
 			]
 		}
