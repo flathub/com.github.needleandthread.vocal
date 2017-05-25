@@ -50,6 +50,16 @@
 	],
 	"modules": [
 		{
+			"name": "libopus",
+			"sources": [
+				{
+					"type":"archive",
+					"url": "https://archive.mozilla.org/pub/opus/opus-1.1.5.tar.gz",
+					"sha256": "eb84981ca0f40a3e5d5e58d2e8582cb2fee05a022825a6dfe14d14b04eb563e4"
+				}
+			]
+		},
+		{
 			"name": "ffmpeg",
 			"cleanup": [ "/include", "/lib/pkgconfig", "/share" ],
 			"config-opts": [
@@ -62,7 +72,8 @@
 				"--enable-avformat",
 				"--enable-swscale",
 				"--enable-decoder=mp3",
-				"--enable-decoder=h264"
+				"--enable-decoder=h264",
+				"--enable-libopus"
 			],
 			"sources": [
 				{
@@ -86,7 +97,6 @@
 		},
 		{
 			"name": "libgee",
-			"buildsystem": "autotools",
 			"build-options": {
 				"env": {
 					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
