@@ -73,6 +73,7 @@
 				"--enable-swscale",
 				"--enable-decoder=mp3",
 				"--enable-decoder=h264",
+				"--enable-decoder=aac",
 				"--enable-libopus"
 			],
 			"sources": [
