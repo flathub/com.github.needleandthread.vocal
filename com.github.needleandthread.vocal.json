@@ -140,8 +140,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/needle-and-thread/vocal/archive/2.0.19.tar.gz",
-					"sha256": "f9854d3c3be4eb95a0f62642fa49bbc4fbe0be44a03147cd5282e3dfab15c6f6"
+					"url": "https://github.com/needle-and-thread/vocal/archive/2.0.20.tar.gz",
+					"sha256": "32219106bf085d43d710986d346b3ceaf01958d90e2cd8e2400963edf13c1358"
 				},
 				{
 					"type": "patch",
