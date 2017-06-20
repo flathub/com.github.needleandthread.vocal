@@ -40,6 +40,7 @@
 	},
 	"cleanup": [
 		"/bin/granite-demo",
+		"/share/applications/granite-demo.desktop",
 		"/include",
 		"/lib/pkgconfig",
 		"/lib/debug",
