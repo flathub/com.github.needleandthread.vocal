@@ -19,6 +19,7 @@
 		"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
 		
 		"--own-name=com.github.needle-and-thread.vocal",
+		"--own-name=org.mpris.MediaPlayer2.com.github.needleandthread.vocal",
 
 		"--talk-name=org.gtk.vfs",
 		"--talk-name=org.gtk.vfs.*",
