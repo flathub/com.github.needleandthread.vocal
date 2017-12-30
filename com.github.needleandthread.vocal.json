@@ -1,7 +1,7 @@
 {
 	"app-id": "com.github.needleandthread.vocal",
 	"runtime": "org.gnome.Platform",
-	"runtime-version": "3.24",
+	"runtime-version": "3.26",
 	"sdk": "org.gnome.Sdk",
 	"command": "vocal",
 	"rename-icon": "com.github.needle-and-thread.vocal",
@@ -13,13 +13,13 @@
 		"--socket=pulseaudio",
 		
 		"--share=network",
+		"--share=ipc",
 		
 		"--device=dri",
 
 		"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
 		
 		"--own-name=com.github.needle-and-thread.vocal",
-		"--own-name=org.mpris.MediaPlayer2.com.github.needleandthread.vocal",
 
 		"--talk-name=org.gtk.vfs",
 		"--talk-name=org.gtk.vfs.*",
@@ -41,7 +41,6 @@
 	},
 	"cleanup": [
 		"/bin/granite-demo",
-		"/share/applications/granite-demo.desktop",
 		"/include",
 		"/lib/pkgconfig",
 		"/lib/debug",
@@ -56,8 +55,8 @@
 			"sources": [
 				{
 					"type":"archive",
-					"url": "https://archive.mozilla.org/pub/opus/opus-1.1.5.tar.gz",
-					"sha256": "eb84981ca0f40a3e5d5e58d2e8582cb2fee05a022825a6dfe14d14b04eb563e4"
+					"url": "https://archive.mozilla.org/pub/opus/opus-1.2.1.tar.gz",
+					"sha256": "cfafd339ccd9c5ef8d6ab15d7e1a412c054bf4cb4ecbbbcc78c12ef2def70732"
 				}
 			]
 		},
@@ -75,14 +74,13 @@
 				"--enable-swscale",
 				"--enable-decoder=mp3",
 				"--enable-decoder=h264",
-				"--enable-decoder=aac",
 				"--enable-libopus"
 			],
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://ffmpeg.org/releases/ffmpeg-3.3.tar.xz",
-					"sha256": "599e7f7c017221c22011c4037b88bdcd1c47cd40c1e466838bc3c465f3e9569d"
+					"url": "https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz",
+					"sha256": "5a77278a63741efa74e26bf197b9bb09ac6381b9757391b922407210f0f991c0"
 				}
 			]
 		},
@@ -93,8 +91,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.10.4.tar.xz",
-					"sha256": "6ca0feca75e3d48315e07f20ec37cf6260ed1e9dde58df355febd5016246268b"
+					"url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.12.4.tar.xz",
+					"sha256": "2a56aa5d2d8cd912f2bce17f174713d2c417ca298f1f9c28ee66d4aa1e1d9e62"
 				}
 			]
 		},
@@ -127,12 +125,8 @@
 			"sources": [
 				{
 					"type":"archive",
-					"url": "https://launchpad.net/granite/0.4/0.4.0.1/+download/granite-0.4.0.1.tar.xz",
-					"sha256": "95a142a8befeedc35a089d638e759b657905508dc3007036d6c1fa3efe94c4dd"
-				},
-				{
-					"type": "patch",
-					"path": "granite.patch"
+					"url": "https://github.com/elementary/granite/archive/0.5.tar.gz",
+					"sha256": "cc4905ae70fddeba3d2ded44bb642be77d419aa090251a7ab24c155b8616be06"
 				}
 			]
 		},
@@ -142,8 +136,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/needle-and-thread/vocal/archive/2.0.20.tar.gz",
-					"sha256": "32219106bf085d43d710986d346b3ceaf01958d90e2cd8e2400963edf13c1358"
+					"url": "https://github.com/needle-and-thread/vocal/archive/2.1.0.tar.gz",
+					"sha256": "eea3f809113c6439b2ad00d5ba79f8d11253192b16eb56af7017eff30cbd654e"
 				},
 				{
 					"type": "patch",
