@@ -3,7 +3,7 @@
 	"runtime": "org.gnome.Platform",
 	"runtime-version": "3.26",
 	"sdk": "org.gnome.Sdk",
-	"command": "vocal",
+	"command": "com.github.needle-and-thread.vocal",
 	"rename-icon": "com.github.needle-and-thread.vocal",
 	"rename-desktop-file": "com.github.needle-and-thread.vocal.desktop",
 	"rename-appdata-file": "com.github.needle-and-thread.vocal.appdata.xml",
@@ -136,8 +136,8 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/needle-and-thread/vocal/archive/2.1.0.tar.gz",
-					"sha256": "eea3f809113c6439b2ad00d5ba79f8d11253192b16eb56af7017eff30cbd654e"
+					"url": "https://github.com/needle-and-thread/vocal/archive/2.1.5.tar.gz",
+					"sha256": "83d800c813a32a9d7ab3385edf04361e9a5e68ba055af20d211e1623a2e27027"
 				},
 				{
 					"type": "patch",
