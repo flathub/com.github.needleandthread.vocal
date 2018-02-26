@@ -54,40 +54,6 @@
 	],
 	"modules": [
 		{
-			"name": "libopus",
-			"sources": [
-				{
-					"type":"archive",
-					"url": "https://archive.mozilla.org/pub/opus/opus-1.2.1.tar.gz",
-					"sha256": "cfafd339ccd9c5ef8d6ab15d7e1a412c054bf4cb4ecbbbcc78c12ef2def70732"
-				}
-			]
-		},
-		{
-			"name": "ffmpeg",
-			"cleanup": [ "/include", "/lib/pkgconfig", "/share" ],
-			"config-opts": [
-				"--disable-all",
-				"--enable-shared",
-				"--disable-static",
-				"--enable-gnutls",
-				"--enable-avfilter",
-				"--enable-avcodec",
-				"--enable-avformat",
-				"--enable-swscale",
-				"--enable-decoder=mp3",
-				"--enable-decoder=h264",
-				"--enable-libopus"
-			],
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz",
-					"sha256": "5a77278a63741efa74e26bf197b9bb09ac6381b9757391b922407210f0f991c0"
-				}
-			]
-		},
-		{
 			"name": "gst-libav",
 			"config-opts": [ "--disable-doc", "--disable-gtk-doc", "--with-system-libav" ],
 			"cleanup": [ "*.la", "/share/gtk-doc" ],
