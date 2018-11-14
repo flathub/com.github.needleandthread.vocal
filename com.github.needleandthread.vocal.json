@@ -1,8 +1,10 @@
 {
 	"app-id": "com.github.needleandthread.vocal",
 	"runtime": "org.gnome.Platform",
-	"runtime-version": "3.28",
+	"runtime-version": "3.30",
 	"sdk": "org.gnome.Sdk",
+	"base": "io.elementary.BaseApp",
+	"base-version": "juno",
 	"command": "com.github.needle-and-thread.vocal",
 	"rename-icon": "com.github.needle-and-thread.vocal",
 	"rename-desktop-file": "com.github.needle-and-thread.vocal.desktop",
@@ -38,10 +40,6 @@
 		"--filesystem=xdg-run/dconf",
 		"--filesystem=xdg-data/vocal:create"
 	],
-	"build-options": {
-		"cflags": "-O2",
-		"cxxflags": "-O2"
-	},
 	"cleanup": [
 		"/bin/granite-demo",
 		"/include",
@@ -55,50 +53,15 @@
 	"modules": [
 		{
 			"name": "gst-libav",
-			"buildsystem": "meson",
-			"config-opts": ["--buildtype=release"],
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://github.com/GStreamer/gst-libav/archive/1.12.5.tar.gz",
-					"sha256": "80dfbfdfe87afb2810bcc80e36a0469833db66cb0866f3b7a648847d35dceaca"
-				}
-			]
-		},
-		{
-			"name": "libgee",
-			"build-options": {
-				"env": {
-					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
-					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
-				}
-			},
-			"sources": [
-				{
-					"type":"archive",
-					"url": "https://github.com/GNOME/libgee/archive/0.20.1.tar.gz",
-					"sha256": "d76d0bf8ae6659dba6018fadf2ccce218ccbc107666925552008806a29702c4b"
-				}
-			]
-		},
-		{
-			"name": "granite",
-			"buildsystem": "cmake-ninja",
-			"config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
-			"build-options": {
-				"env": {
-					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
-					"PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
-				}
-			},
-			"sources": [
-				{
-					"type":"archive",
-					"url": "https://github.com/elementary/granite/archive/0.5.tar.gz",
-					"sha256": "cc4905ae70fddeba3d2ded44bb642be77d419aa090251a7ab24c155b8616be06"
-				}
-			]
-		},
+			"config-opts": [
+				"--disable-gtk-doc"
+			],
+			"sources": [{
+			  "type": "archive",
+			  "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.4.tar.xz",
+			  "sha256": "dfd78591901df7853eab7e56a86c34a1b03635da0d3d56b89aa577f1897865da"
+			}]
+	  	},
 		{
 			"name": "vocal",
 			"buildsystem": "cmake-ninja",
@@ -106,8 +69,12 @@
 			"sources": [
 				{
 					"type": "archive",
-					"url": "https://github.com/needle-and-thread/vocal/archive/2.2.0.tar.gz",
-					"sha256": "2f9c5a3273cc0f6af9361f82258bebe221770fe5f7c2e46f378ca41b4c450e7c"
+					"url": "https://github.com/needle-and-thread/vocal/archive/2.3.0.tar.gz",
+					"sha256": "9076657246ddfb7403b8cca92b8a08d184c3260b4981cddfa9680a1390252387"
+				},
+				{
+					"type": "patch",
+					"path": "icon-theme.patch"
 				}
 			]
 		}
