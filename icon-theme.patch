@@ -1,18 +1,3 @@
-diff --git a/src/Controller.vala b/src/Controller.vala
-index 968f1b4..2e66c77 100644
---- a/src/Controller.vala
-+++ b/src/Controller.vala
-@@ -98,6 +98,10 @@ namespace Vocal {
-             info ("Initializing the main window.");
-             
-             window = new MainWindow (this);
-+
-+            // patching in flatpak theme override
-+            Gtk.Settings.get_default().set_property("gtk-theme-name", "elementary");
-+            Gtk.Settings.get_default().set_property("gtk-icon-theme-name", "elementary");
-             
-             // Once the Window exists, connect player signals
-             player.eos.connect (window.on_stream_ended);
 diff --git a/src/Vocal.vala b/src/Vocal.vala
 index cd29bec..8b85538 100644
 --- a/src/Vocal.vala
@@ -20,7 +5,7 @@ index cd29bec..8b85538 100644
 @@ -43,7 +43,7 @@ namespace Vocal {
              build_version_info = Constants.VERSION_INFO;
  
-             app_years = "2015-2018";
+             app_years = "2015-2019";
 -            app_icon = "com.github.needle-and-thread.vocal";
 +            app_icon = "com.github.needleandthread.vocal";
              app_launcher = "com.github.needle-and-thread.vocal.desktop";
