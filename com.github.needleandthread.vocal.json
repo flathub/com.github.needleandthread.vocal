@@ -1,10 +1,10 @@
 {
 	"app-id": "com.github.needleandthread.vocal",
 	"runtime": "org.gnome.Platform",
-	"runtime-version": "3.30",
+	"runtime-version": "3.34",
 	"sdk": "org.gnome.Sdk",
 	"base": "io.elementary.BaseApp",
-	"base-version": "juno",
+	"base-version": "juno-19.08",
 	"command": "com.github.needleandthread.vocal",
 	"finish-args": [
 		"--socket=wayland",
@@ -16,14 +16,8 @@
 
 		"--device=dri",
 
-		"--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-
-		"--own-name=com.github.needle-and-thread.vocal",
-		"--own-name=org.mpris.MediaPlayer2.com.github.needleandthread.vocal",
-
 		"--talk-name=org.gtk.vfs",
 		"--talk-name=org.gtk.vfs.*",
-		"--talk-name=ca.desrt.dconf",
 		"--talk-name=org.freedesktop.secrets",
 		"--talk-name=org.freedesktop.Notifications",
 		"--talk-name=org.gnome.SettingsDaemon.MediaKeys",
@@ -31,45 +25,20 @@
 		"--talk-name=org.xfce.SessionManager",
 		"--talk-name=org.gnome.SessionManager",
 
-		"--filesystem=/tmp",
 		"--filesystem=home",
-		"--filesystem=xdg-config/dconf:ro",
-		"--filesystem=xdg-run/dconf",
-		"--filesystem=xdg-data/vocal:create"
+		"--filesystem=/tmp",
+		"--filesystem=xdg-data/vocal:create",
+		"--metadata=X-DConf=migrate-path=/com/github/needleandthread/vocal/"
 	],
-	"cleanup": [
-		"/bin/granite-demo",
-		"/include",
-		"/lib/pkgconfig",
-		"/lib/debug",
-		"/share/vala",
-		"/man",
-		"*.a",
-		"*.la"
-	],
-	"modules": [
-		{
-			"name": "gst-libav",
-			"config-opts": [
-				"--disable-gtk-doc"
-			],
-			"sources": [{
-			  "type": "archive",
-			  "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.4.tar.xz",
-			  "sha256": "dfd78591901df7853eab7e56a86c34a1b03635da0d3d56b89aa577f1897865da"
-			}]
-	  	},
-		{
-			"name": "vocal",
-			"buildsystem": "cmake-ninja",
-			"config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://github.com/needle-and-thread/vocal/archive/2.4.2.tar.gz",
-					"sha256": "be1991f08db05feacad30a0f459002327ba5ff3cb04757383f1da62904acdb41"
-				}
-			]
-		}
-	]
+	"modules": [{
+		"name": "vocal",
+		"buildsystem": "cmake-ninja",
+		"config-opts": ["-DCMAKE_BUILD_TYPE=Release"],
+		"sources": [{
+				"type": "archive",
+				"url": "https://github.com/needle-and-thread/vocal/archive/2.4.2.tar.gz",
+				"sha256": "be1991f08db05feacad30a0f459002327ba5ff3cb04757383f1da62904acdb41"
+			}
+		]
+	}]
 }
