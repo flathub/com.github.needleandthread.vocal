@@ -1,10 +1,10 @@
 {
 	"app-id": "com.github.needleandthread.vocal",
 	"runtime": "org.gnome.Platform",
-	"runtime-version": "3.36",
+	"runtime-version": "40",
 	"sdk": "org.gnome.Sdk",
 	"base": "io.elementary.BaseApp",
-	"base-version": "juno-19.08",
+	"base-version": "juno-20.08",
 	"command": "com.github.needleandthread.vocal",
 	"finish-args": [
 		"--socket=wayland",
@@ -16,6 +16,7 @@
 
 		"--device=dri",
 
+		"--filesystem=xdg-run/gvfsd",
 		"--talk-name=org.gtk.vfs",
 		"--talk-name=org.gtk.vfs.*",
 		"--talk-name=org.freedesktop.secrets",
@@ -25,8 +26,6 @@
 		"--talk-name=org.xfce.SessionManager",
 		"--talk-name=org.gnome.SessionManager",
 
-		"--filesystem=home",
-		"--filesystem=/tmp",
 		"--filesystem=xdg-data/vocal:create",
 		"--metadata=X-DConf=migrate-path=/com/github/needleandthread/vocal/"
 	],
