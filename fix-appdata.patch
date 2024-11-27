@@ -1,0 +1,92 @@
+From 3abb524578a7af61eeeb6facb6d176c59a0561e4 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Tue, 26 Nov 2024 20:02:10 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+Fix some issues.
+---
+ data/com.github.needleandthread.vocal.appdata.xml | 52 ++++++----------------------------------------------
+ 1 file changed, 6 insertions(+), 46 deletions(-)
+
+diff --git a/data/com.github.needleandthread.vocal.appdata.xml b/data/com.github.needleandthread.vocal.appdata.xml
+index c132fcf..bf8d169 100644
+--- a/data/com.github.needleandthread.vocal.appdata.xml
++++ b/data/com.github.needleandthread.vocal.appdata.xml
+@@ -10,28 +10,8 @@
+   
+   <screenshots>
+     <screenshot type="default">
+-      <caption>Library View with Light Theme</caption>
+-      <image width="1148" height="775">https://github.com/needle-and-thread/vocal/raw/master/screenshot1.png</image>
+-    </screenshot>
+-    <screenshot type="default">
+       <caption>Library View with Dark Theme</caption>
+-      <image width="1148" height="775">https://github.com/needle-and-thread/vocal/raw/master/screenshot2.png</image>
+-    </screenshot>
+-    <screenshot type="default">
+-      <caption>iTunes Top 100 Podcasts</caption>
+-      <image width="1148" height="843">https://github.com/needle-and-thread/vocal/raw/master/screenshot3.png</image>
+-    </screenshot>
+-    <screenshot type="default">
+-      <caption>Video Playback</caption>
+-      <image width="1148" height="843">https://github.com/needle-and-thread/vocal/raw/master/screenshot4.png</image>
+-    </screenshot>
+-    <screenshot type="default">
+-      <caption>New Episode View</caption>
+-      <image width="1148" height="843">https://github.com/needle-and-thread/vocal/raw/master/screenshot5.png</image>
+-    </screenshot>
+-    <screenshot type="default">
+-      <caption>Podcast View</caption>
+-      <image width="1148" height="887">https://github.com/needle-and-thread/vocal/raw/master/screenshot6.png</image>
++      <image width="1480" height="687">https://vocalproject.net/images/library_screenshot_cropped.png</image>
+     </screenshot>
+   </screenshots>
+ 
+@@ -56,8 +36,9 @@
+     </ul>
+   </description>
+ 
+-  <url type="homepage">http://github.com/needle-and-thread/vocal</url>
+-  <url type="bugtracker">https://github.com/needle-and-thread/vocal/issues</url>
++  <url type="homepage">https://github.com/VocalPodcastProject/vocal</url>
++  <url type="bugtracker">https://github.com/VocalPodcastProject/vocal/issues</url>
++  <url type="vcs-browser">https://github.com/VocalPodcastProject/vocal</url>
+ 
+   <custom>
+     <value key="x-appcenter-color-primary">#603461</value>
+@@ -68,30 +49,9 @@
+   <provides>
+     <binary>vocal</binary>
+   </provides>
+-  
+-  <content_rating type="oars-1.0">
+-    <content_attribute id="violence-cartoon">none</content_attribute>
+-    <content_attribute id="violence-fantasy">none</content_attribute>
+-    <content_attribute id="violence-realistic">none</content_attribute>
+-    <content_attribute id="violence-bloodshed">none</content_attribute>
+-    <content_attribute id="violence-sexual">none</content_attribute>
+-    <content_attribute id="drugs-alcohol">moderate</content_attribute>
+-    <content_attribute id="drugs-narcotics">moderate</content_attribute>
+-    <content_attribute id="drugs-tobacco">moderate</content_attribute>
+-    <content_attribute id="sex-nudity">none</content_attribute>
+-    <content_attribute id="sex-themes">moderate</content_attribute>
+-    <content_attribute id="language-profanity">moderate</content_attribute>
+-    <content_attribute id="language-humor">moderate</content_attribute>
+-    <content_attribute id="language-discrimination">moderate</content_attribute>
+-    <content_attribute id="social-chat">none</content_attribute>
+-    <content_attribute id="social-info">none</content_attribute>
+-    <content_attribute id="social-audio">none</content_attribute>
+-    <content_attribute id="social-location">none</content_attribute>
+-    <content_attribute id="social-contacts">none</content_attribute>
+-    <content_attribute id="money-purchasing">none</content_attribute>
+-    <content_attribute id="money-gambling">none</content_attribute>
+-  </content_rating>
+ 
++  <content_rating type="oars-1.1"/>
++  <launchable type="desktop-id">com.github.needleandthread.vocal.desktop</launchable>
+ 
+   <releases>
+     <release version = "2.4.2" timestamp="1558375090">
+--
+libgit2 1.7.2
+
